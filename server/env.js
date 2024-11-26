@@ -15,7 +15,8 @@ exports.handler = async (event, context) => {
                 },
             }
         );
-        const token = response.data; 
+        const token = response.data?.token; 
+        
         return {
             statusCode: 200,
             body: JSON.stringify({ token }),
