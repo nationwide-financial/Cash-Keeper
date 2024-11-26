@@ -15,7 +15,7 @@ exports.handler = async (event, context) => {
                 },
             }
         );
-        const token = response.data.token; 
+        const token = response.data; 
         return {
             statusCode: 200,
             body: JSON.stringify({ token }),
@@ -24,7 +24,7 @@ exports.handler = async (event, context) => {
         console.error('Error connecting to the API:', error.message);
         return {
             statusCode: 500,
-            body: JSON.stringify({ error: 'Error retrieving token' }),
+            body: JSON.stringify({ error: error.message }),
         };
     }
 };
