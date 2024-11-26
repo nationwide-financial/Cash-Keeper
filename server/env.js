@@ -1,9 +1,9 @@
 exports.handler = async (event, context) => {
     try {
-        // process.env.DB_HOST
+        const key = process.env.API_KEY
         return {
             statusCode: 200,
-            body: JSON.stringify({message: "success"}),
+            body: JSON.stringify({message: key}),
         };
     } catch (error) {
         console.error('Error connecting to the database:', error);
