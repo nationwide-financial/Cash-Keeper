@@ -12,16 +12,29 @@ document.querySelector('.offer-form').addEventListener('submit', async function 
             },
             body: {},
         });
-        console.log(response?.data)
-        // if (response.ok) {
-        //     const result = await response.json();
-        //     alert('Form submitted successfully!'); 
-        //     console.log('Server Response:', result);
-        // } else {
-        //     const error = await response.json();
-        //     alert('Failed to submit the form.'); 
-        //     console.error('Error:', error);
-        // }
+        const token = response?.data?.token
+        if (response.ok) {
+            const response = await fetch('https://7fwwglseys3xlqk6hogiazspv40gzoug.lambda-url.us-east-1.on.aws/api/create-lead-basic-info', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}` // Replace `yourToken` with the actual token value
+                },
+                body: JSON.stringify({ // Convert the body to a JSON string
+                    "offer_code": data?.access_code,
+                    "first_name": data?.first_name,
+                    "last_name": data?.last_name,
+                    "email": data?.email,
+                    "phone_number": data?.phone,
+                    "loan_amount": data?.debt_amount,
+                }),
+            });
+            console.log(response?.data)
+        } else {
+            const error = await response.json();
+            alert('Failed to submit the form.'); 
+            console.error('Error:', error);
+        }
     } catch (error) {
         console.error('Network Error:', error);
         alert('Network error. Please try again.');
