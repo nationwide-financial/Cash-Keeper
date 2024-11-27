@@ -15,7 +15,7 @@ document.querySelector('.offer-form').addEventListener('submit', async function 
     
       
 
-        if (response.ok) {
+        if (res.ok) {
             const responseData = await res.json(); // Process response once
             console.log(responseData)
 
