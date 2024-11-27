@@ -3,6 +3,8 @@ document.querySelector('.offer-form').addEventListener('submit', async function 
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
     console.log(data)
+    const successMessage = document.querySelector('.success-message');
+    const form = document.querySelector('.offer-form');
 
     try {
         const res = await fetch('https://cashkeeperfinancial.netlify.app/.netlify/functions/env', {
@@ -32,7 +34,11 @@ document.querySelector('.offer-form').addEventListener('submit', async function 
                     "loan_amount": data?.debt_amount,
                 }),
             });
-            console.log(response?.data)
+            if(response?.ok){
+                form.style.display = 'none';
+                successMessage.style.display = 'block';
+
+            }
         } else {
             const error = await response.json();
             alert('Failed to submit the form.'); 
