@@ -12,8 +12,8 @@ document.querySelector('.offer-form').addEventListener('submit', async function 
             },
             body: {},
         });
-        //const token = response?.data;
-        console.log(response)
+        const res = response?.json();
+        console.log(res)
         // if (response.ok) {
         //     const response = await fetch('https://7fwwglseys3xlqk6hogiazspv40gzoug.lambda-url.us-east-1.on.aws/api/create-lead-basic-info', {
         //         method: 'POST',
