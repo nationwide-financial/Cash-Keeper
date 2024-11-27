@@ -16,25 +16,23 @@ document.querySelector('.offer-form').addEventListener('submit', async function 
       
 
         if (res.ok) {
-            const responseData = await res.json(); // Process response once
-            console.log(responseData)
-
-            // const response = await fetch('https://7fwwglseys3xlqk6hogiazspv40gzoug.lambda-url.us-east-1.on.aws/api/create-lead-basic-info', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //         'Authorization': `Bearer ${token}` // Replace `yourToken` with the actual token value
-            //     },
-            //     body: JSON.stringify({ // Convert the body to a JSON string
-            //         "offer_code": data?.access_code,
-            //         "first_name": data?.first_name,
-            //         "last_name": data?.last_name,
-            //         "email": data?.email,
-            //         "phone_number": data?.phone,
-            //         "loan_amount": data?.debt_amount,
-            //     }),
-            // });
-            // console.log(response?.data)
+            const responseData = await res.json(); 
+            const response = await fetch('https://7fwwglseys3xlqk6hogiazspv40gzoug.lambda-url.us-east-1.on.aws/api/create-lead-basic-info', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${responseData?.token}` // Replace `yourToken` with the actual token value
+                },
+                body: JSON.stringify({ // Convert the body to a JSON string
+                    "offer_code": data?.access_code,
+                    "first_name": data?.first_name,
+                    "last_name": data?.last_name,
+                    "email": data?.email,
+                    "phone_number": data?.phone,
+                    "loan_amount": data?.debt_amount,
+                }),
+            });
+            console.log(response?.data)
         } else {
             const error = await response.json();
             alert('Failed to submit the form.'); 
