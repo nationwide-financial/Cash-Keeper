@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 
 *{
     padding: 0;
@@ -199,36 +199,13 @@ a, a:hover {
 }
 
 .cash-section {
-    position: relative; /* Ensure positioning for the overlay */
-    padding-top:110px;
-    display: flex;
-    align-items: flex-start; 
-    padding-bottom: 90px; 
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/cash-d.jpg') !important; /* Your background image */
-    background-size: cover;
     background-position: right 20% center;
-    background-repeat: no-repeat;
-    opacity: 0.3; /* Set opacity for the background image */
-    z-index: 1; /* Ensure it stays behind the text */
+    background-size: cover;
+    background-image: url(../img/cash-d.jpg)!important;
+    padding-top: 280px;
+    opacity: 0.3;
+    
 }
-
-.container {
-    position: relative; /* Keeps the text above the overlay */
-    z-index: 2; /* Ensure text is above the overlay */
-}
-
-h2, p {
-    font-weight: 500; /* Your font styling */
-}
-
 
 .padding-r-5pr {
     padding-right: 5%;
@@ -261,11 +238,6 @@ h2, p {
     gap: 16px;
     align-items: center;
 }
-.hero-button2-wrapper{
-    display: flex;
-    gap: 16px;
-    align-items: center;
-}
 
 .pr-btn{
     font-size: 20px;
@@ -276,7 +248,8 @@ h2, p {
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
-    border-radius: 2px;
+    border: 2px solid;
+    border-radius: 3px;
     -webkit-transition-duration: .2s;
     transition-duration: .2s;
     -webkit-transition-property: all!important;
@@ -415,13 +388,13 @@ h2, p {
     font-size: 20px;
 }
 
-.offer-form-wrapper,.about-form-wrapper{
+.offer-form-wrapper{
     background-color: #fff;
     border-radius: 26px;
     padding: 33px;
 }
 
-.offer-form-wrapper h2,.about-form-wrapper h2{
+.offer-form-wrapper h2{
     font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
     font-weight: 700;
     font-size: 29px;
@@ -429,7 +402,7 @@ h2, p {
     text-align: center;
 }
 
-.offer-form-wrapper .subtitle, .about-form-wrapper .subtitle {
+.offer-form-wrapper .subtitle {
     text-align: center;
     color: #666;;
     margin-top: 1.3em;
@@ -443,7 +416,7 @@ h2, p {
 
 
 
-.offer-form input[type=text], .offer-form input[type=email], .offer-form input[type=tel], .offer-form textarea, .offer-form select,.about-form input[type=text], .about-form input[type=email], .about-form input[type=tel], .about-form textarea, .about-form select {
+.offer-form input[type=text], .offer-form input[type=email], .offer-form input[type=tel], .offer-form textarea, .offer-form select {
     width: 100%;
     background-color: #f7f7f7;
     border: 1px solid #c4c4c4;
@@ -487,7 +460,7 @@ h2, p {
     padding-left: 2px;
 }
 
-.offer-form .btn-submit,.about-form .btn-submit{
+.offer-form .btn-submit{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -509,7 +482,7 @@ h2, p {
     transition-property: all!important;
 }
 
-.offer-form .btn-submit i,.about-form .btn-submit i{
+.offer-form .btn-submit i{
     color: #f9c23c;
 }
 
@@ -537,8 +510,9 @@ h2, p {
 
 /*Accordion*/
 .accordion, .accordion-item {
-    border: none!important;
+    border: none;
     --bs-accordion-inner-border-radius: 0;
+    
 }
 
 .accordion-collapse {
@@ -610,128 +584,8 @@ h2, p {
     bottom: 0; 
 }
 
-/* about page custom css */
-.about-title,.about-subtitle{
-    color: white;
-    
-}
-.about-subtitle{
-    font-size: 30px;
-    font-weight: 300;
-}
-.about-title{
-    font-size: 42px;
-    font-weight: 700;
-}
-.about-input,.about-select{
-    padding: 14px; 
-    border-color: #c4c4c4;
-    background-color: #f7f7f7;
-    color: #787878;
-}
-.about-chekbox{
-    border-color: #c4c4c4;
-    background-color: #f7f7f7;
-    
-    padding: 8px;
-}
-.about-input:focus, .about-select:focus,.about-chekbox:focus{
-    
-    border-color: #666 !important; 
-     
-}
-/* lp1 page custom css */
-.hero-lp1 {
-    /*background-position: right 20% center;*/
-    background-position: right 20% center;
-    background-size: cover;
-    background-image: url(../img/debt-bg.jpg)!important;
-    padding-top: 200px;
-    
-}
-.hero-lp1-main-title{
-    font-size: 87px;
-    font-weight: 700;
-    position: relative;
-    top: -56px; 
-    line-height: 90px;
-}
-
-.hero-lp1-btn {
-    color: #FFFFFF!important;
-    font-size: 16px;
-    font-weight: 700!important;
-    background-color: transparent;
-    text-decoration: none;
-    padding: 10px 35px;
-    border: 2px solid #FFFFFF;
-    
-}
-.hero-lp1-description{
-    line-height: 1.5em!important;
-    font-weight: 500;
-    font-size: 18px;
-    position: relative;
-    top: -45px; 
-
-}
-.footer-lp1-btn{
-    color: #FFFFFF!important;
-    font-size: 24px;
-    font-weight: 700!important;
-    background-color: transparent;
-    text-decoration: none;
-    padding: 10px 70px;
-    border: 2px solid #FFFFFF;
-}
-.footer-lp1-btn2{
-    color: #FFFFFF!important;
-    font-size: 18px !important;
-    font-weight: 400!important;
-    white-space: Nowrap;
-    background-color: transparent;
-    text-decoration: none;
-    padding: 2px 40px;
-    border: 2px solid #FFFFFF;
-}
-.lp1-banner-Maintitle{
-    font-size: 31px;
-    font-weight: 700;
-    color: white;
-}
-.lp1-banner-subtitle{
-    font-size: 21px;
-    font-weight: 500;
-    color: white;
-    
-}
 
 /*=================================================================Smaller Screens=============================================*/
-@media (max-width: 768px) {
-    .lp1-icon .thanku-icon {
-        width: 15%; /* Adjust for mobile screens */
-    }
-    .hero-lp1-main-title{
-        font-size: 50px;
-        line-height: 50px;
-    }
-    .hero-lp1-btn{
-        font-size: 14px !important; 
-       
-    }
-    .w-95-center {
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-     }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-    .lp1-icon .thanku-icon {
-        width: 20%; /* Adjust for tablet screens */
-    }
-}
-
 @media (max-width: 576px) {
 
     .mt-small-y{
@@ -876,12 +730,12 @@ h2, p {
         font-size: 20px;
     }
     
-    .about-form-wrapper{
+    .offer-form-wrapper{
         border-radius: 24px;
         padding: 28px;
     }
     
-    .about-form-wrapper h2{
+    .offer-form-wrapper h2{
         font-size: 20px;
     }
     
@@ -890,12 +744,12 @@ h2, p {
         margin-bottom: 20px;
     }
     
-    .about-form input[type=text], .about-form input[type=email], .about-form input[type=tel], .about-form textarea, .about-form select {
+    .offer-form input[type=text], .offer-form input[type=email], .offer-form input[type=tel], .offer-form textarea, .offer-form select {
         font-size: 14px;
         padding: 10px;
     }
     
-    .about-form .btn-submit{
+    .offer-form .btn-submit{
         font-size: 18px;
     }
     
@@ -922,3 +776,199 @@ h2, p {
     }
    
 }
+
+/*============== NEW CLASSES CREATED ON DEC-11-2024 =================*/
+.text-17px {
+    font-size: 17px;
+    color: #666;
+    margin: 0;
+}
+
+.faq-hero {
+    padding: 90px 0;
+    background-image: url('../img/faqs-hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.faq-hero h1 {
+    font-size: 33px;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1em;
+    font-weight: 500;
+}
+
+.faq-section {
+    background-color: #f2f2f2;
+}
+
+.faq-h1 {
+    margin: 0;
+    color: #0C71C3;
+}
+
+.faq-p {
+   font-size: 20px;
+}
+
+.faq-accordion {
+    --bs-accordion-bg: transparent;
+}
+
+.faq-accordion-item{
+    margin-top: 2rem;
+    border: 1px solid #d9d9d9 !important;
+    border-radius: 0!important;
+    background-color: transparent;
+}
+
+.faq-accordion-button{
+    font-size: 16px;
+    font-weight: 500;
+    color: #666 !important;
+    border-bottom: none !important;
+}
+
+.faq-accordion-item:has(.faq-accordion-button:not(.collapsed)) {
+    background-color: #fff;
+}
+
+.faq-accordion-body{
+    color: #666;
+    font-weight: 500;
+    line-height: 1.7em;
+}
+
+.faq-contact{
+    color: #0C71C3;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.3em;
+    text-decoration: none;
+}
+
+.process-card{
+    text-align: center;
+    padding: 0 20px;
+}
+
+.process-card i{
+    color: #0C71C3;
+    font-size: 100px;
+}
+
+.process-card h3{
+    color: #333 !important;
+}
+
+.faq-hpw-card {
+    padding: 16px;
+    text-align: center;
+}
+
+.faq-hpw-card h3{
+    color: #0C71C3 !important;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.p-disclaimer{
+    margin: 0;
+    font-size: 12.5px;
+    font-weight: 300;
+    line-height: 2em;
+    color: #a3a3a3;
+    margin: 20px 0;
+}
+
+
+/*============== NEW CLASSES CREATED FOR SERVICES PAGE ON DEC-12-2024 =================*/
+.services-hero {
+    padding: 90px 0;
+    background-blend-mode: overlay;
+    background-image: url('../img/services-hero.jpg');
+    background-color: rgba(255,255,255,0.77);
+    background-size: cover;
+    background-position: center;
+}
+
+.services-hero h1 {
+    font-size: 33px;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1em;
+    font-weight: 500;
+}
+
+.service-features{
+    color: #000 !important;
+}
+.service-features h6{
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+
+/*============== QR =================*/
+.qr-hero {
+    padding: 90px 0;
+    background-image: url('../img/qr-hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.qr-hero h1 {
+    font-size: 33px;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1em;
+    font-weight: 500;
+}
+
+.btn-blue {
+    color: #FFFFFF!important;
+    border-width: 0px!important;
+    font-size: 20px;
+    font-weight: 700!important;
+    background-color: #0C71C3;
+    text-decoration: none;
+    padding: 10px 35px;
+}
+
+.qr-input {
+    background-color: #eee;
+    border-radius: 0;
+    border: none;
+    color: #999;
+    padding: 16px;
+    font-size: 14px;
+}
+
+.qr-input::placeholder{
+    color: #999;
+}
+
+.qr-input:focus{
+    background-color: #eee;
+    outline: none;
+    border: none;
+}
+
+.qr-btn {
+    color: #FFFFFF!important;
+    border-width: 0px!important;
+    font-size: 17px;
+    font-weight: 500!important;
+    background-color: #0C71C3;
+    padding: 0.3em 1.5em;
+}
+
+.h6-disclaimer{
+    font-weight: 700;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: -10px;
+}
+
+
